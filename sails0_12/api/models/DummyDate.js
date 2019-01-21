@@ -14,13 +14,7 @@ module.exports = {
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
     dateFormat: {
-      type: 'ref',
-      columnType: 'datetime',
-      required: true,
-      //Without validation the object is created as is (string instead of date)
-      custom: function (dateAttribute){
-        return (_.isDate(dateAttribute));
-      }
+      type: 'datetime',
     }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
