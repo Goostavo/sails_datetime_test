@@ -13,6 +13,15 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
+    dateFormat: {
+      type: 'ref',
+      columnType: 'datetime',
+      required: true,
+      //Without validation the object is created as is
+      custom: function (dateAttribute){
+        return (_.isDate(dateAttribute));
+      }
+    }
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
@@ -26,4 +35,3 @@ module.exports = {
   },
 
 };
-
